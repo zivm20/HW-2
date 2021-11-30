@@ -9,7 +9,7 @@ void function_A(int arr[N*N],int mat[N][N]){
 }
 
 void function_B(int mat[N][N], int src, int dest){
-  if(fuction_C(mat,src,dest) != -1){
+  if(function_C(mat,src,dest) != -1){
     printf("True");
   }
   else{
@@ -20,9 +20,9 @@ void function_B(int mat[N][N], int src, int dest){
 
 
 
-int fuction_C(int mat[N][N], int src, int dest){
+int function_C(int mat[N][N], int src, int dest){
   if(src==dest){
-    return 0;
+    return -1;
   }
   int DPMatrix[N][N][N] = {0};
   //since our matix represents an undirected graph, then for all elements e(i,j) for indexs i,j
@@ -80,7 +80,7 @@ int fuction_C(int mat[N][N], int src, int dest){
               lastBestRoute = DPMatrix[node-1][i][j];
             }
             else{
-              lastBestRoute = matrix[i][j];
+              lastBestRoute = mat[i][j];
             }
             //we will now store the faster route between the route that we found in the last matrix
             //and the combination of the 2 routes we got in this matrix
