@@ -1,0 +1,5 @@
+io_examples/*
+check_submition.py
+*.o
+main
+*.so
