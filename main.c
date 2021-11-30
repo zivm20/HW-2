@@ -5,7 +5,6 @@ int main(){
   int arr[N*N];
   int mat[N][N];
   char functionType;
-  int first_print = true;
   do{
     scanf("%c",&functionType);
     if(functionType == 'A'){
@@ -16,12 +15,6 @@ int main(){
     }
 
     else if(functionType == 'B' || functionType=='C'){
-      if(first_print == true){
-        first_print = false;
-      }
-      else{
-        printf("\n");
-      }
       int src;
       int dest;
       scanf("%d",&src);
@@ -32,6 +25,7 @@ int main(){
       else{
         printf("%d",function_C(mat,src,dest));
       }
+      printf("\n");
     }
 
   }while(functionType != 'D');
